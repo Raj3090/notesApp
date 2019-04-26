@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NotesApp</string>
+    <string name="title_activity_note_list">NoteListActivity</string>
+    <string name="note_value_hint">Enter your note</string>
+    <string name="note_title_hint">Title</string>
+    <string name="note_location_hint">Location</string>
+</resources>
