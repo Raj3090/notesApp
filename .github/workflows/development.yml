@@ -22,7 +22,7 @@ jobs:
         with:
           java-version: 1.8
       - name: assemble debug apk
-        run: bash ./gradlew assempleDebug --stacktrace
+        run: bash ./gradlew :notesApp:assempleDebug --stacktrace
       
         
       - name: Upload APK
