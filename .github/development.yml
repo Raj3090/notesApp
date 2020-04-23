@@ -1,0 +1,33 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  debug-apk:
+    name: Assemble App Debug apk
+    runs-on: ubuntu-18.04
+
+    steps:
+    - name: assemble debug apk
+      run: bash ./gradlew notesApp app:assempleDebug --stacktrace
+      
+        
+    - name: Upload APK
+      uses: actions/upload-artifact@v1
+      with:
+        name: bebug apk
+        path: notesApp/build/outputs/apk/dev/debug/notesapp-debug.apk
+      
+
+        
+    
+ 
